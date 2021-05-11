@@ -38,8 +38,8 @@ namespace Banco_De_Financias
             DateTime DataAtual = DateTime.Now;
             string textoDesricao = descricao.Text;
             float valor = (float)Valor.Value;
-            
-            if(Valor.Value > 0)
+
+            if (Valor.Value > 0)
             {
                 valorEntradas.Value += (decimal)valor;
             }else
@@ -49,6 +49,7 @@ namespace Banco_De_Financias
 
 
             // o painel total fica verde quando é positivo e fica vermelho quando é negativo
+            /*
             if (valorTotal.Value >= 0)
             {
                 panel5.BackColor = Color.Green;
@@ -57,7 +58,7 @@ namespace Banco_De_Financias
             {
                 panel5.BackColor = Color.Red;
             }
-
+*/
 
             valorTotal.Value += (decimal)valor;
             
@@ -71,7 +72,6 @@ namespace Banco_De_Financias
 
         private void saidas_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
@@ -85,8 +85,8 @@ namespace Banco_De_Financias
 
         private void RTBresultado_TextChanged(object sender, EventArgs e)
         {
-
+            panel5.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
         }
-
+ 
     }
 }
