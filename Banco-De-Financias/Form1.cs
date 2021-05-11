@@ -47,6 +47,8 @@ namespace Banco_De_Financias
                 valorSaidas.Value += (decimal)valor;
             }
 
+
+            // o painel total fica verde quando é positivo e fica vermelho quando é negativo
             if (valorTotal.Value >= 0)
             {
                 panel5.BackColor = Color.Green;

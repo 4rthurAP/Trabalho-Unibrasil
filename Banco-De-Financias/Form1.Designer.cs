@@ -35,22 +35,22 @@ namespace Banco_De_Financias
             this.Confirmar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.valorTotal = new System.Windows.Forms.NumericUpDown();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.valorSaidas = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.valorEntradas = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.descricao = new System.Windows.Forms.TextBox();
             this.Valor = new System.Windows.Forms.NumericUpDown();
             this.Data = new System.Windows.Forms.DateTimePicker();
             this.Total = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorTotal)).BeginInit();
@@ -96,7 +96,7 @@ namespace Banco_De_Financias
             // Confirmar
             // 
             this.Confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Confirmar.Location = new System.Drawing.Point(736, 209);
+            this.Confirmar.Location = new System.Drawing.Point(732, 192);
             this.Confirmar.Name = "Confirmar";
             this.Confirmar.Size = new System.Drawing.Size(103, 40);
             this.Confirmar.TabIndex = 4;
@@ -126,6 +126,17 @@ namespace Banco_De_Financias
             this.panel5.Size = new System.Drawing.Size(188, 90);
             this.panel5.TabIndex = 3;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(56, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 37);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Total";
+            // 
             // valorTotal
             // 
             this.valorTotal.DecimalPlaces = 2;
@@ -148,6 +159,17 @@ namespace Banco_De_Financias
             this.panel4.Size = new System.Drawing.Size(188, 91);
             this.panel4.TabIndex = 2;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(49, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 37);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Saídas";
+            // 
             // valorSaidas
             // 
             this.valorSaidas.DecimalPlaces = 2;
@@ -169,6 +191,17 @@ namespace Banco_De_Financias
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(188, 91);
             this.panel3.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(36, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 37);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Entradas";
             // 
             // valorEntradas
             // 
@@ -194,6 +227,36 @@ namespace Banco_De_Financias
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(647, 77);
             this.panel2.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(417, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Data";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(255, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Valor";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(28, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Descrição";
             // 
             // descricao
             // 
@@ -226,69 +289,6 @@ namespace Banco_De_Financias
             this.Total.TabIndex = 2;
             this.Total.Text = "TOTAL";
             this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(28, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Descrição";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(255, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Valor";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(417, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Data";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(36, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 37);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Entradas";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(49, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 37);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Saídas";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(56, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 37);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Total";
             // 
             // Form1
             // 
