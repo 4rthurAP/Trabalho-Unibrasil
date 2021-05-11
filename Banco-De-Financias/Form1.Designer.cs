@@ -45,6 +45,12 @@ namespace Banco_De_Financias
             this.Valor = new System.Windows.Forms.NumericUpDown();
             this.Data = new System.Windows.Forms.DateTimePicker();
             this.Total = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorTotal)).BeginInit();
@@ -79,11 +85,11 @@ namespace Banco_De_Financias
             // 
             this.cancelar.BackColor = System.Drawing.Color.DarkRed;
             this.cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cancelar.Location = new System.Drawing.Point(736, 172);
+            this.cancelar.Location = new System.Drawing.Point(1087, 172);
             this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(103, 31);
+            this.cancelar.Size = new System.Drawing.Size(103, 73);
             this.cancelar.TabIndex = 3;
-            this.cancelar.Text = "Cancelar";
+            this.cancelar.Text = "Limpar tudo";
             this.cancelar.UseVisualStyleBackColor = false;
             this.cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
@@ -104,15 +110,16 @@ namespace Banco_De_Financias
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(-6, 1);
+            this.panel1.Location = new System.Drawing.Point(-6, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1210, 137);
+            this.panel1.Size = new System.Drawing.Size(1210, 143);
             this.panel1.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.valorTotal);
             this.panel5.Location = new System.Drawing.Point(862, 47);
             this.panel5.Name = "panel5";
@@ -134,6 +141,7 @@ namespace Banco_De_Financias
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.valorSaidas);
             this.panel4.Location = new System.Drawing.Point(470, 46);
             this.panel4.Name = "panel4";
@@ -145,7 +153,7 @@ namespace Banco_De_Financias
             this.valorSaidas.DecimalPlaces = 2;
             this.valorSaidas.Enabled = false;
             this.valorSaidas.InterceptArrowKeys = false;
-            this.valorSaidas.Location = new System.Drawing.Point(51, 52);
+            this.valorSaidas.Location = new System.Drawing.Point(42, 52);
             this.valorSaidas.Name = "valorSaidas";
             this.valorSaidas.Size = new System.Drawing.Size(100, 23);
             this.valorSaidas.TabIndex = 4;
@@ -155,6 +163,7 @@ namespace Banco_De_Financias
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.valorEntradas);
             this.panel3.Location = new System.Drawing.Point(75, 46);
             this.panel3.Name = "panel3";
@@ -166,7 +175,7 @@ namespace Banco_De_Financias
             this.valorEntradas.DecimalPlaces = 2;
             this.valorEntradas.Enabled = false;
             this.valorEntradas.InterceptArrowKeys = false;
-            this.valorEntradas.Location = new System.Drawing.Point(40, 52);
+            this.valorEntradas.Location = new System.Drawing.Point(46, 52);
             this.valorEntradas.Name = "valorEntradas";
             this.valorEntradas.Size = new System.Drawing.Size(100, 23);
             this.valorEntradas.TabIndex = 3;
@@ -175,6 +184,9 @@ namespace Banco_De_Financias
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.descricao);
             this.panel2.Controls.Add(this.Valor);
             this.panel2.Controls.Add(this.Data);
@@ -215,6 +227,69 @@ namespace Banco_De_Financias
             this.Total.Text = "TOTAL";
             this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(28, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Descrição";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(255, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Valor";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(417, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Data";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(36, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 37);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Entradas";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(49, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 37);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Saídas";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(56, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 37);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Total";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -231,10 +306,13 @@ namespace Banco_De_Financias
             this.Text = "Banco de Financias";
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorTotal)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorSaidas)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorEntradas)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -261,6 +339,12 @@ namespace Banco_De_Financias
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

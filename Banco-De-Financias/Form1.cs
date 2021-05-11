@@ -46,7 +46,19 @@ namespace Banco_De_Financias
             {
                 valorSaidas.Value += (decimal)valor;
             }
+
+            if (valorTotal.Value >= 0)
+            {
+                panel5.BackColor = Color.Green;
+            }
+            else
+            {
+                panel5.BackColor = Color.Red;
+            }
+
+
             valorTotal.Value += (decimal)valor;
+            
             RTBresultado.AppendText
                 (
                 $"{textoDesricao}   " + $"{valor} Reais" + $"\t {DataAtual}" + "\n" +
