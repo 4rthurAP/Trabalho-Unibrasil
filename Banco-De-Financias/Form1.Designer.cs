@@ -96,9 +96,9 @@ namespace Banco_De_Financias
             // Confirmar
             // 
             this.Confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.Confirmar.Location = new System.Drawing.Point(732, 192);
+            this.Confirmar.Location = new System.Drawing.Point(735, 172);
             this.Confirmar.Name = "Confirmar";
-            this.Confirmar.Size = new System.Drawing.Size(103, 40);
+            this.Confirmar.Size = new System.Drawing.Size(100, 73);
             this.Confirmar.TabIndex = 4;
             this.Confirmar.Text = "Confirmar";
             this.Confirmar.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@ namespace Banco_De_Financias
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -216,7 +216,7 @@ namespace Banco_De_Financias
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -302,7 +302,11 @@ namespace Banco_De_Financias
             this.Controls.Add(this.NomeProj);
             this.Controls.Add(this.RTBresultado);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banco de Financias";
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

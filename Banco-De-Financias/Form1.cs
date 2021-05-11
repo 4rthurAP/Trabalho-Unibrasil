@@ -47,19 +47,6 @@ namespace Banco_De_Financias
                 valorSaidas.Value += (decimal)valor;
             }
 
-
-            // o painel total fica verde quando é positivo e fica vermelho quando é negativo
-            /*
-            if (valorTotal.Value >= 0)
-            {
-                panel5.BackColor = Color.Green;
-            }
-            else
-            {
-                panel5.BackColor = Color.Red;
-            }
-*/
-
             valorTotal.Value += (decimal)valor;
             
             RTBresultado.AppendText
@@ -85,6 +72,7 @@ namespace Banco_De_Financias
 
         private void RTBresultado_TextChanged(object sender, EventArgs e)
         {
+            // o painel total fica verde quando é positivo e fica vermelho quando é negativo
             panel5.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
         }
  
