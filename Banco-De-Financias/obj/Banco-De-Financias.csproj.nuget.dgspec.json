@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arthur Pereira\\Desktop\\trabalhos UNIBRASIL\\C#\\Banco-De-Financias\\Banco-De-Financias.csproj": {}
+    "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financias.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arthur Pereira\\Desktop\\trabalhos UNIBRASIL\\C#\\Banco-De-Financias\\Banco-De-Financias.csproj": {
+    "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arthur Pereira\\Desktop\\trabalhos UNIBRASIL\\C#\\Banco-De-Financias\\Banco-De-Financias.csproj",
+        "projectUniqueName": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financias.csproj",
         "projectName": "Banco-De-Financias",
-        "projectPath": "C:\\Users\\Arthur Pereira\\Desktop\\trabalhos UNIBRASIL\\C#\\Banco-De-Financias\\Banco-De-Financias.csproj",
+        "projectPath": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financias.csproj",
         "packagesPath": "C:\\Users\\Arthur Pereira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arthur Pereira\\Desktop\\trabalhos UNIBRASIL\\C#\\Banco-De-Financias\\obj\\",
+        "outputPath": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Arthur Pereira\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -17,3 +17,22 @@ C:\Users\Arthur Pereira\Desktop\trabalhos UNIBRASIL\C#\Banco-De-Financias\obj\De
 C:\Users\Arthur Pereira\Desktop\trabalhos UNIBRASIL\C#\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.pdb
 C:\Users\Arthur Pereira\Desktop\trabalhos UNIBRASIL\C#\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.genruntimeconfig.cache
 C:\Users\Arthur Pereira\Desktop\trabalhos UNIBRASIL\C#\Banco-De-Financias\obj\Debug\net5.0-windows\Banco_De_Financias.Properties.Resources.resources
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.exe
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.deps.json
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.runtimeconfig.json
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.runtimeconfig.dev.json
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\ref\Banco-De-Financias.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Banco-De-Financias.pdb
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.csprojAssemblyReference.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco_De_Financias.Form1.resources
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco_De_Financias.Properties.Resources.resources
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.csproj.GenerateResource.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.AssemblyInfoInputs.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.AssemblyInfo.cs
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.csproj.CoreCompileInputs.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\ref\Banco-De-Financias.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.pdb
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financias.genruntimeconfig.cache

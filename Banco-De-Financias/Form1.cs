@@ -60,10 +60,13 @@ namespace Banco_De_Financias
 
         }
 
-        private void cancelar_Click(object sender, EventArgs e)
+        private void Cancelar_Click(object sender, EventArgs e)
         {
             RTBresultado.ResetText();
             valorSaidas.ResetText();
+            valorEntradas.ResetText();
+            valorTotal.ResetText();
+
         }
 
         private void RTBresultado_TextChanged(object sender, EventArgs e)

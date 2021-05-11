@@ -85,7 +85,7 @@ namespace Banco_De_Financias
             this.cancelar.TabIndex = 3;
             this.cancelar.Text = "Cancelar";
             this.cancelar.UseVisualStyleBackColor = false;
-            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
+            this.cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Confirmar
             // 
