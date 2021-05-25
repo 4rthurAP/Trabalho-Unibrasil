@@ -34,7 +34,7 @@ namespace Banco_De_Financias
             valorSaidas.Minimum = -1000000000000;
             valorSaidas.Maximum = 1000000000000;
 
-
+             
             DateTime DataAtual = DateTime.Now;
             string textoDesricao = descricao.Text;
             float valor = (float)Valor.Value;
@@ -78,7 +78,36 @@ namespace Banco_De_Financias
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+                
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            /* Determines whether the user wants to exit the application.
+             * If not, adds another number to the list box. */
+            while (true)
+            {
+                if (MessageBox.Show("Deseja sair?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    Application.Exit();
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            // The user wants to exit the application. Close everything down.
+            
+        }
+
+        private void AddMeta_Click(object sender, EventArgs e)
+        {
+            DataTime DataCheck = monthCalendar1_DateSelected();
+            string texto =  textBox1.Text;
+            checkedListBox1.Items.Add(texto,CheckState.Unchecked);
+            
         }
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
