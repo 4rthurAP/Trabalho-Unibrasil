@@ -35,6 +35,7 @@ namespace Banco_De_Financias
             this.cancelar = new System.Windows.Forms.Button();
             this.Confirmar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Salvar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -120,6 +121,7 @@ namespace Banco_De_Financias
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.Controls.Add(this.Salvar);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel5);
@@ -130,6 +132,18 @@ namespace Banco_De_Financias
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1210, 143);
             this.panel1.TabIndex = 0;
+            // 
+            // Salvar
+            // 
+            this.Salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Salvar.Location = new System.Drawing.Point(1113, 108);
+            this.Salvar.Margin = new System.Windows.Forms.Padding(0);
+            this.Salvar.Name = "Salvar";
+            this.Salvar.Size = new System.Drawing.Size(86, 31);
+            this.Salvar.TabIndex = 10;
+            this.Salvar.Text = "S A L V A R";
+            this.Salvar.UseVisualStyleBackColor = false;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
             // 
             // pictureBox2
             // 
@@ -355,7 +369,7 @@ namespace Banco_De_Financias
             this.AddMeta.Location = new System.Drawing.Point(64, 56);
             this.AddMeta.Margin = new System.Windows.Forms.Padding(0);
             this.AddMeta.Name = "AddMeta";
-            this.AddMeta.Size = new System.Drawing.Size(79, 29);
+            this.AddMeta.Size = new System.Drawing.Size(95, 29);
             this.AddMeta.TabIndex = 9;
             this.AddMeta.Text = "ADD";
             this.AddMeta.UseVisualStyleBackColor = false;
@@ -365,12 +379,13 @@ namespace Banco_De_Financias
             // 
             this.RemoveMeta.BackColor = System.Drawing.Color.DarkRed;
             this.RemoveMeta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.RemoveMeta.Location = new System.Drawing.Point(216, 56);
+            this.RemoveMeta.Location = new System.Drawing.Point(197, 56);
             this.RemoveMeta.Name = "RemoveMeta";
-            this.RemoveMeta.Size = new System.Drawing.Size(75, 30);
+            this.RemoveMeta.Size = new System.Drawing.Size(94, 30);
             this.RemoveMeta.TabIndex = 10;
-            this.RemoveMeta.Text = "REMOVE";
+            this.RemoveMeta.Text = "REMOVE ALL";
             this.RemoveMeta.UseVisualStyleBackColor = false;
+            this.RemoveMeta.Click += new System.EventHandler(this.RemoveMeta_Click);
             // 
             // label8
             // 
@@ -448,9 +463,6 @@ namespace Banco_De_Financias
         private System.Windows.Forms.TextBox descricao;
         private System.Windows.Forms.NumericUpDown Valor;
         private System.Windows.Forms.DateTimePicker Data;
-        private System.Windows.Forms.NumericUpDown valorTotal;
-        private System.Windows.Forms.NumericUpDown valorSaidas;
-        private System.Windows.Forms.NumericUpDown valorEntradas;
         private System.Windows.Forms.TextBox Total;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
@@ -470,6 +482,10 @@ namespace Banco_De_Financias
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button Salvar;
+        public System.Windows.Forms.NumericUpDown valorTotal;
+        public System.Windows.Forms.NumericUpDown valorSaidas;
+        public System.Windows.Forms.NumericUpDown valorEntradas;
     }
 }
 

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
 
 namespace Banco_De_Financias
@@ -14,17 +11,14 @@ namespace Banco_De_Financias
 
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Confirmar_Click(object sender, EventArgs e)
-        {
 
             Valor.Minimum = -1000000000000;
             Valor.Maximum = 1000000000;
-            
+
             valorTotal.Minimum = -1000000000000;
             valorTotal.Maximum = 1000000000000;
 
@@ -34,8 +28,36 @@ namespace Banco_De_Financias
             valorSaidas.Minimum = -1000000000000;
             valorSaidas.Maximum = 1000000000000;
 
-             
-            DateTime DataAtual = DateTime.Now;
+            string jsonString = File.ReadAllText(arquivo);
+            Salvar save = JsonSerializer.Deserialize<Salvar>(jsonString);
+
+            if (save.Entrada != 0 && save.Saida != 0 && save.RTB != null)
+            {
+                valorEntradas.Value = save.Entrada;
+
+                valorSaidas.Value = save.Saida;
+
+                checkedListBox1.Items.Add(save.Metas);
+
+                RTBresultado.Text = save.RTB;
+
+                valorTotal.Value = save.Total;
+            }
+
+            // DOFERENÇA ENTRE CODIGO ASSINCRONO E CODIGO SINCRONO
+
+            // string arquivu = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+            // StreamReader sr = new StreamReader(arquivu);
+            // JsonConversao jsonconv = new JsonConversao();
+            // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(sr));
+            // sr.Close();
+
+        }
+
+        private void Confirmar_Click(object sender, EventArgs e)
+        {
+    
+            DateTime Data = DateTime.Now;
             string textoDesricao = descricao.Text;
             float valor = (float)Valor.Value;
 
@@ -51,9 +73,9 @@ namespace Banco_De_Financias
             
             RTBresultado.AppendText
                 (
-                $"{textoDesricao}   " + $"{valor} Reais" + $"\t {DataAtual}" + "\n" +
-                "\n" +
-                $"|-----------------------------------------------------------------------------------------------------------------------------------------------------| \n "
+                    $"{textoDesricao}   " + $"{valor} Reais" + $"\t {Data}" + "\n" +
+                    "\n" +
+                    $"|-----------------------------------------------------------------------------------------------------------------------------------------------------| \n "
                 );
         }
 
@@ -67,6 +89,10 @@ namespace Banco_De_Financias
             valorSaidas.ResetText();
             valorEntradas.ResetText();
             valorTotal.ResetText();
+            
+            valorTotal.Value = 0;
+            valorEntradas.Value = 0;
+            valorSaidas.Value = 0;
 
         }
 
@@ -104,10 +130,57 @@ namespace Banco_De_Financias
 
         private void AddMeta_Click(object sender, EventArgs e)
         {
-            DataTime DataCheck = monthCalendar1_DateSelected();
+
+            DateTime DataCheck = monthCalendar1.SelectionEnd;
             string texto =  textBox1.Text;
-            checkedListBox1.Items.Add(texto,CheckState.Unchecked);
+            
+            checkedListBox1.Items.Add(texto +" "+ DataCheck,CheckState.Unchecked);
             
         }
+
+        private void RemoveMeta_Click(object sender, EventArgs e)
+        {
+            checkedListBox1.Items.Clear();
+        }
+
+        public void Salvar_Click(object sender, EventArgs e)
+        {
+
+
+            var save = new Salvar()
+            {
+                Entrada = valorEntradas.Value,
+                Saida = valorSaidas.Value,
+                Total = valorTotal.Value,
+                RTB = RTBresultado.Text,
+                Metas = checkedListBox1.Items
+            };
+
+            //JsonConversao jsonconv = new JsonConversao();
+           // string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+
+            string jsonString = JsonSerializer.Serialize(save);
+            File.WriteAllText(arquivo, jsonString);
+
+            MessageBox.Show("Voce Salvou", "",MessageBoxButtons.OK);
+           // StreamWriter sw = new StreamWriter("D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json");
+           // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(save));
+           // sw.Close();
+
+            //StreamReader sr = new StreamReader(arquivo);
+            // arquivo = jsonconv.ConverteJSonParaObject<Salvaar>(save).ToString();
+        }
+
+        private readonly string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+
+    }
+
+    public class Salvar
+    {
+            public decimal Entrada { get; set; }
+            public decimal Saida { get; set; }
+            public decimal Total { get; set; }
+            public string RTB { get; set; }
+            public object Metas { get; set; }
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
