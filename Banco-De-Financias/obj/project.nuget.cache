@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/xqHSSDsktzOkj4KR/wx4JLukRiFSo6q2aTZjgp42cpxEHShgGkfkYlW+I38r1jAlhUhkAPhVxq3w7aJ0Y/y5Q==",
+  "dgSpecHash": "4HAHl2HTIFttatA5mKevgCsAJ2sNF7Apg5rwdFYJrCNSroSA6vC0wxWLhnfWw2wPFQaQ+xMVf0kblXS7a7Tm0Q==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financias.csproj",
+  "projectFilePath": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.11.1\\microsoft.identitymodel.jsonwebtokens.6.11.1.nupkg.sha512",

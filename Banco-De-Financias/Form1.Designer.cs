@@ -77,9 +77,11 @@ namespace Banco_De_Financias
             // 
             // RTBresultado
             // 
+            this.RTBresultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RTBresultado.Location = new System.Drawing.Point(12, 265);
             this.RTBresultado.Name = "RTBresultado";
             this.RTBresultado.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.RTBresultado.ShowSelectionMargin = true;
             this.RTBresultado.Size = new System.Drawing.Size(823, 414);
             this.RTBresultado.TabIndex = 1;
             this.RTBresultado.Text = "";
@@ -163,9 +165,9 @@ namespace Banco_De_Financias
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(18, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(244, 37);
+            this.label7.Size = new System.Drawing.Size(237, 37);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Banco De Financias";
+            this.label7.Text = "Banco De Financas";
             // 
             // panel5
             // 

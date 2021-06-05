@@ -28,6 +28,7 @@ namespace Banco_De_Financias
             valorSaidas.Minimum = -1000000000000;
             valorSaidas.Maximum = 1000000000000;
 
+            // Lê o arquivo e desserializa o arquivo json e transforma em objeto
             string jsonString = File.ReadAllText(arquivo);
             Salvar save = JsonSerializer.Deserialize<Salvar>(jsonString);
 
@@ -43,8 +44,11 @@ namespace Banco_De_Financias
 
                 valorTotal.Value = save.Total;
             }
+            // O painel total fica verde quando é positivo e fica vermelho quando é negativo
+            panel5.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
 
-            // DOFERENÇA ENTRE CODIGO ASSINCRONO E CODIGO SINCRONO
+
+            // DiFERENÇA ENTRE CODIGO ASSINCRONO E CODIGO SINCRONO
 
             // string arquivu = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
             // StreamReader sr = new StreamReader(arquivu);
@@ -93,12 +97,12 @@ namespace Banco_De_Financias
             valorTotal.Value = 0;
             valorEntradas.Value = 0;
             valorSaidas.Value = 0;
-
+             
         }
 
         private void RTBresultado_TextChanged(object sender, EventArgs e)
         {
-            // o painel total fica verde quando é positivo e fica vermelho quando é negativo
+            // O painel total fica verde quando é positivo e fica vermelho quando é negativo
             panel5.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
         }
 
@@ -159,10 +163,11 @@ namespace Banco_De_Financias
             //JsonConversao jsonconv = new JsonConversao();
            // string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
 
+            // Serializa o objeto e transforma em json e salva
             string jsonString = JsonSerializer.Serialize(save);
             File.WriteAllText(arquivo, jsonString);
 
-            MessageBox.Show("Voce Salvou", "",MessageBoxButtons.OK);
+            MessageBox.Show("Voce Salvou!", "",MessageBoxButtons.OK);
            // StreamWriter sw = new StreamWriter("D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json");
            // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(save));
            // sw.Close();

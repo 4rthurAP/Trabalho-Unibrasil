@@ -3,8 +3,9 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
-    <RootNamespace>Banco_De_Financias</RootNamespace>
+    <RootNamespace>Banco_De_Financas</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>Banco-De-Financas</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
