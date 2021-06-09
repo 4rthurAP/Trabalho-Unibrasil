@@ -93,9 +93,9 @@ namespace Banco_De_Financias
             this.NomeProj.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.NomeProj.Location = new System.Drawing.Point(498, 706);
             this.NomeProj.Name = "NomeProj";
-            this.NomeProj.Size = new System.Drawing.Size(282, 30);
+            this.NomeProj.Size = new System.Drawing.Size(277, 30);
             this.NomeProj.TabIndex = 2;
-            this.NomeProj.Text = "Projeto | Banco de Financias";
+            this.NomeProj.Text = "Projeto | Banco de Finanças";
             // 
             // cancelar
             // 
@@ -205,7 +205,7 @@ namespace Banco_De_Financias
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(237, 37);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Banco De Financas";
+            this.label7.Text = "Banco De Finanças";
             // 
             // panel5
             // 

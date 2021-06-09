@@ -34,11 +34,14 @@ namespace Banco_De_Financias
             valorSaidas.Minimum = -1000000000000;
             valorSaidas.Maximum = 1000000000000;
 
-            // Lê o arquivo e desserializa o arquivo json e transforma em objeto
-            string jsonString = File.ReadAllText(arquivo);
-
-            var save = JsonConvert.DeserializeObject<Salva>(jsonString);
-
+            
+            string jsonString = File.ReadAllText(arquivo);                  // Lê o arquivo e desserializa 
+            var save = JsonConvert.DeserializeObject<Salva>(jsonString);    // o arquivo json e transforma em objeto
+            
+            foreach (var elemento in save.Metas)
+            {
+                listaObj.Add(elemento);
+            }
 
             if (save.Entrada != 0 || save.Saida != 0 || save.RTB != null || save.Total != 0)
             {
