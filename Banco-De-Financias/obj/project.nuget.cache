@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4HAHl2HTIFttatA5mKevgCsAJ2sNF7Apg5rwdFYJrCNSroSA6vC0wxWLhnfWw2wPFQaQ+xMVf0kblXS7a7Tm0Q==",
+  "dgSpecHash": "4QtQUSmtgUj++F+Lx7AG2UI0cFKT5iZIuD8MWmdHfhhQPz/LKUVglObg56EZG4vyvJlrPhALepwxlwPvBRnhRQ==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Banco-De-Financas.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.11.1\\microsoft.identitymodel.jsonwebtokens.6.11.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\microsoft.identitymodel.logging\\6.11.1\\microsoft.identitymodel.logging.6.11.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.11.1\\microsoft.identitymodel.tokens.6.11.1.nupkg.sha512",
+    "C:\\Users\\Arthur Pereira\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.11.1\\system.identitymodel.tokens.jwt.6.11.1.nupkg.sha512",
     "C:\\Users\\Arthur Pereira\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],

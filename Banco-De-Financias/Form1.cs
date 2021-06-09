@@ -1,21 +1,27 @@
 ﻿
+using Banco_De_Financas.Models;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Windows.Forms;
+using System.Text.Json.Serialization;
+using System.Text;
+using System.Runtime.Serialization.Json;
+using Newtonsoft.Json;
 
 namespace Banco_De_Financias
 {
-
-
-    public partial class Form1 : Form
+    
+    public  partial class Form1 : Form
     {
-
+        public List<Metas> listaObj = new List<Metas>();
         public Form1()
         {
             InitializeComponent();
-
+            
             Valor.Minimum = -1000000000000;
             Valor.Maximum = 1000000000;
 
@@ -30,32 +36,32 @@ namespace Banco_De_Financias
 
             // Lê o arquivo e desserializa o arquivo json e transforma em objeto
             string jsonString = File.ReadAllText(arquivo);
-            Salvar save = JsonSerializer.Deserialize<Salvar>(jsonString);
 
-            if (save.Entrada != 0 && save.Saida != 0 && save.RTB != null)
+            var save = JsonConvert.DeserializeObject<Salva>(jsonString);
+
+
+            if (save.Entrada != 0 || save.Saida != 0 || save.RTB != null || save.Total != 0)
             {
-                valorEntradas.Value = save.Entrada;
+                valorEntradas.Value = save.Entrada; 
 
                 valorSaidas.Value = save.Saida;
-
-                checkedListBox1.Items.Add(save.Metas);
 
                 RTBresultado.Text = save.RTB;
 
                 valorTotal.Value = save.Total;
+
+                foreach (var elemento in save.Metas)
+                {
+                    checkedListBox1.Items.Add(elemento.Texto + " " + elemento.DataCheck + elemento.Check);
+                }
             }
+
+
             // O painel total fica verde quando é positivo e fica vermelho quando é negativo
             panel5.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
-
+            label6.BackColor = valorTotal.Value >= 0 ? Color.Green : Color.Red;
 
             // DiFERENÇA ENTRE CODIGO ASSINCRONO E CODIGO SINCRONO
-
-            // string arquivu = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
-            // StreamReader sr = new StreamReader(arquivu);
-            // JsonConversao jsonconv = new JsonConversao();
-            // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(sr));
-            // sr.Close();
-
         }
 
         private void Confirmar_Click(object sender, EventArgs e)
@@ -79,7 +85,7 @@ namespace Banco_De_Financias
                 (
                     $"{textoDesricao}   " + $"{valor} Reais" + $"\t {Data}" + "\n" +
                     "\n" +
-                    $"|-----------------------------------------------------------------------------------------------------------------------------------------------------| \n "
+                    $"|------------------------------------------------------------------------------------------------------------------------------------------------------------| \n "
                 );
         }
 
@@ -113,6 +119,7 @@ namespace Banco_De_Financias
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
             /* Determines whether the user wants to exit the application.
              * If not, adds another number to the list box. */
             while (true)
@@ -131,15 +138,20 @@ namespace Banco_De_Financias
             // The user wants to exit the application. Close everything down.
             
         }
-
         private void AddMeta_Click(object sender, EventArgs e)
         {
 
-            DateTime DataCheck = monthCalendar1.SelectionEnd;
-            string texto =  textBox1.Text;
-            
-            checkedListBox1.Items.Add(texto +" "+ DataCheck,CheckState.Unchecked);
-            
+             DateTime DataCheck = monthCalendar1.SelectionStart;
+             string texto = textBox1.Text;
+
+
+            listaObj.Add(new Metas(texto, DataCheck, 0));   
+
+
+            checkedListBox1.Items.Add(texto + " " + DataCheck, CheckState.Unchecked);
+
+            // checkedListBox1.Items.Add(texto +" "+ DataCheck,CheckState.Unchecked);
+
         }
 
         private void RemoveMeta_Click(object sender, EventArgs e)
@@ -150,42 +162,37 @@ namespace Banco_De_Financias
         public void Salvar_Click(object sender, EventArgs e)
         {
 
-
-            var save = new Salvar()
+            var save = new Salva()
             {
                 Entrada = valorEntradas.Value,
                 Saida = valorSaidas.Value,
                 Total = valorTotal.Value,
                 RTB = RTBresultado.Text,
-                Metas = checkedListBox1.Items
+                Metas = listaObj
             };
 
             //JsonConversao jsonconv = new JsonConversao();
-           // string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+            // string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
 
+ 
             // Serializa o objeto e transforma em json e salva
-            string jsonString = JsonSerializer.Serialize(save);
+            string jsonString = JsonConvert.SerializeObject(save);
             File.WriteAllText(arquivo, jsonString);
 
             MessageBox.Show("Voce Salvou!", "",MessageBoxButtons.OK);
-           // StreamWriter sw = new StreamWriter("D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json");
-           // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(save));
-           // sw.Close();
+            // StreamWriter sw = new StreamWriter("D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json");
+            // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(save));
+            // sw.Close();
 
             //StreamReader sr = new StreamReader(arquivo);
             // arquivo = jsonconv.ConverteJSonParaObject<Salvaar>(save).ToString();
         }
 
-        private readonly string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+        private readonly string arquivo = @"D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
 
-    }
+        private void label6_Click(object sender, EventArgs e)
+        {
 
-    public class Salvar
-    {
-            public decimal Entrada { get; set; }
-            public decimal Saida { get; set; }
-            public decimal Total { get; set; }
-            public string RTB { get; set; }
-            public object Metas { get; set; }
+        }
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
