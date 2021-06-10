@@ -174,21 +174,13 @@ namespace Banco_De_Financias
                 Metas = listaObj
             };
 
-            //JsonConversao jsonconv = new JsonConversao();
-            // string arquivo = "D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
 
- 
-            // Serializa o objeto e transforma em json e salva
-            string jsonString = JsonConvert.SerializeObject(save);
-            File.WriteAllText(arquivo, jsonString);
+            
+            string jsonString = JsonConvert.SerializeObject(save);// Serializa o objeto 
+            File.WriteAllText(arquivo, jsonString);               // e transforma em json e salva
 
             MessageBox.Show("Voce Salvou!", "",MessageBoxButtons.OK);
-            // StreamWriter sw = new StreamWriter("D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json");
-            // object saves = jsonconv.ConverteJSonParaObject<Salvaar>(jsonconv.ConverteObjectParaJSon(save));
-            // sw.Close();
 
-            //StreamReader sr = new StreamReader(arquivo);
-            // arquivo = jsonconv.ConverteJSonParaObject<Salvaar>(save).ToString();
         }
 
         private readonly string arquivo = @"D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
