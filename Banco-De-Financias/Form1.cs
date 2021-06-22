@@ -23,7 +23,7 @@ namespace Banco_De_Financias
             InitializeComponent();
             
             Valor.Minimum = -1000000000000;
-            Valor.Maximum = 1000000000;
+            Valor.Maximum = 1000000000000;
 
             valorTotal.Minimum = -1000000000000;
             valorTotal.Maximum = 1000000000000;
@@ -31,8 +31,8 @@ namespace Banco_De_Financias
             valorEntradas.Minimum = -1000000000000;
             valorEntradas.Maximum = 1000000000000;
 
-            valorSaidas.Minimum = -1000000000000;
-            valorSaidas.Maximum = 1000000000000;
+            valorSaidas.Minimum = -10000000000000;
+            valorSaidas.Maximum = 10000000000000;
 
             
             string jsonString = File.ReadAllText(arquivo);                  // Lê o arquivo e desserializa 
@@ -183,7 +183,7 @@ namespace Banco_De_Financias
 
         }
 
-        private readonly string arquivo = @"D:\\GitHub\\Projeto_C#\\Projeto_Banco_de_Financias\\Trabalho-Unibrasil\\Banco-De-Financias\\Properties\\ArquivoJSON.json";
+        private readonly string arquivo = @"~\\ArquivoJSON.json";
 
         private void label6_Click(object sender, EventArgs e)
         {

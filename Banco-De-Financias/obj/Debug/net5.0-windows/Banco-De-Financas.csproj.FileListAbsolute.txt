@@ -8,8 +8,8 @@ D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Fina
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.csprojAssemblyReference.cache
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco_De_Financias.Form1.resources
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco_De_Financas.Properties.Resources.resources
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.csproj.GenerateResource.cache
@@ -22,4 +22,4 @@ D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Fina
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\ref\Banco-De-Financas.dll
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.pdb
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.genruntimeconfig.cache
-D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.csprojAssemblyReference.cache
