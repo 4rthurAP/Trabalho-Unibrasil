@@ -22,4 +22,15 @@ D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Fina
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\ref\Banco-De-Financas.dll
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.pdb
 D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.genruntimeconfig.cache
-D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.csprojAssemblyReference.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\obj\Debug\net5.0-windows\Banco-De-Financas.csproj.AssemblyReference.cache
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+D:\GitHub\Projeto_C#\Projeto_Banco_de_Financias\Trabalho-Unibrasil\Banco-De-Financias\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll

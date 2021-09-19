@@ -30,7 +30,6 @@ namespace Banco_De_Financias
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.RTBresultado = new System.Windows.Forms.RichTextBox();
             this.NomeProj = new System.Windows.Forms.Label();
             this.cancelar = new System.Windows.Forms.Button();
             this.Confirmar = new System.Windows.Forms.Button();
@@ -53,7 +52,7 @@ namespace Banco_De_Financias
             this.label1 = new System.Windows.Forms.Label();
             this.descricao = new System.Windows.Forms.TextBox();
             this.Valor = new System.Windows.Forms.NumericUpDown();
-            this.Data = new System.Windows.Forms.DateTimePicker();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.Total = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -62,6 +61,10 @@ namespace Banco_De_Financias
             this.RemoveMeta = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.DataTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.valorSaidas)).BeginInit();
@@ -73,19 +76,8 @@ namespace Banco_De_Financias
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Valor)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // RTBresultado
-            // 
-            this.RTBresultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RTBresultado.Location = new System.Drawing.Point(12, 265);
-            this.RTBresultado.Name = "RTBresultado";
-            this.RTBresultado.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.RTBresultado.ShowSelectionMargin = true;
-            this.RTBresultado.Size = new System.Drawing.Size(823, 414);
-            this.RTBresultado.TabIndex = 1;
-            this.RTBresultado.Text = "";
-            this.RTBresultado.TextChanged += new System.EventHandler(this.RTBresultado_TextChanged);
             // 
             // NomeProj
             // 
@@ -103,7 +95,7 @@ namespace Banco_De_Financias
             this.cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cancelar.Location = new System.Drawing.Point(679, 165);
             this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(158, 29);
+            this.cancelar.Size = new System.Drawing.Size(153, 29);
             this.cancelar.TabIndex = 3;
             this.cancelar.Text = "LIMPAR";
             this.cancelar.UseVisualStyleBackColor = false;
@@ -116,7 +108,7 @@ namespace Banco_De_Financias
             this.Confirmar.Location = new System.Drawing.Point(679, 218);
             this.Confirmar.Margin = new System.Windows.Forms.Padding(0);
             this.Confirmar.Name = "Confirmar";
-            this.Confirmar.Size = new System.Drawing.Size(156, 27);
+            this.Confirmar.Size = new System.Drawing.Size(153, 27);
             this.Confirmar.TabIndex = 4;
             this.Confirmar.Text = "CONFIRMAR";
             this.Confirmar.UseVisualStyleBackColor = false;
@@ -151,6 +143,7 @@ namespace Banco_De_Financias
             // 
             // valorSaidas
             // 
+            this.valorSaidas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.valorSaidas.DecimalPlaces = 2;
             this.valorSaidas.Enabled = false;
             this.valorSaidas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -286,7 +279,7 @@ namespace Banco_De_Financias
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.descricao);
             this.panel2.Controls.Add(this.Valor);
-            this.panel2.Controls.Add(this.Data);
+            this.panel2.Controls.Add(this.Date);
             this.panel2.Location = new System.Drawing.Point(12, 165);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(647, 80);
@@ -340,13 +333,13 @@ namespace Banco_De_Financias
             this.Valor.Size = new System.Drawing.Size(120, 23);
             this.Valor.TabIndex = 1;
             // 
-            // Data
+            // Date
             // 
-            this.Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Data.Location = new System.Drawing.Point(417, 31);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(200, 23);
-            this.Data.TabIndex = 0;
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(417, 31);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(200, 23);
+            this.Date.TabIndex = 0;
             // 
             // Total
             // 
@@ -425,10 +418,41 @@ namespace Banco_De_Financias
             this.panel7.Controls.Add(this.textBox1);
             this.panel7.Controls.Add(this.RemoveMeta);
             this.panel7.Controls.Add(this.AddMeta);
-            this.panel7.Location = new System.Drawing.Point(843, 144);
+            this.panel7.Location = new System.Drawing.Point(838, 144);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(347, 535);
+            this.panel7.Size = new System.Drawing.Size(352, 535);
             this.panel7.TabIndex = 12;
+            // 
+            // DataTable
+            // 
+            this.DataTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.DataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Data,
+            this.dataGridViewTextBoxColumn2});
+            this.DataTable.Location = new System.Drawing.Point(15, 271);
+            this.DataTable.Name = "DataTable";
+            this.DataTable.RowTemplate.Height = 25;
+            this.DataTable.Size = new System.Drawing.Size(817, 408);
+            this.DataTable.TabIndex = 13;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Data
+            // 
+            this.Data.HeaderText = "Data";
+            this.Data.Name = "Data";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descricao";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 580;
             // 
             // Form1
             // 
@@ -438,12 +462,12 @@ namespace Banco_De_Financias
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1202, 759);
+            this.Controls.Add(this.DataTable);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Confirmar);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.NomeProj);
-            this.Controls.Add(this.RTBresultado);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -468,13 +492,13 @@ namespace Banco_De_Financias
             ((System.ComponentModel.ISupportInitialize)(this.Valor)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.RichTextBox RTBresultado;
         private System.Windows.Forms.Label NomeProj;
         private System.Windows.Forms.Button cancelar;
         private System.Windows.Forms.Button Confirmar;
@@ -482,7 +506,7 @@ namespace Banco_De_Financias
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox descricao;
         private System.Windows.Forms.NumericUpDown Valor;
-        private System.Windows.Forms.DateTimePicker Data;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.TextBox Total;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
@@ -506,6 +530,10 @@ namespace Banco_De_Financias
         public System.Windows.Forms.NumericUpDown valorSaidas;
         public System.Windows.Forms.NumericUpDown valorEntradas;
         public System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView DataTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
 

@@ -18,6 +18,6 @@ namespace Banco_De_Financias
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            }
+        }
     }
 }

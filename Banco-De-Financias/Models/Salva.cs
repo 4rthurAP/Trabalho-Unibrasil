@@ -9,12 +9,11 @@ namespace Banco_De_Financas.Models
 {
     public class Salva
     {
+        public decimal Id { get; set; }
         public decimal Entrada { get; set; }
         public decimal Saida { get; set; }
         public decimal Total { get; set; }
-        public string RTB { get; set; }
+        public List<ViewLinha> ViewLinhas { get; set; }
         public List<Metas> Metas { get; set; }
-
-
     }
 }
