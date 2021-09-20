@@ -63,7 +63,7 @@ namespace Banco_De_Financias
 
                 foreach (var elemento in save.Metas)
                 {
-                    checkedListBox1.Items.Add(elemento.Texto + " " + elemento.DataCheck + elemento.Check);
+                    checkedListBox1.Items.Add(elemento.Texto + " " + elemento.DataCheck);
                 }
             }
 
